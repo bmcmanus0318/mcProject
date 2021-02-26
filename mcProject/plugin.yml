@@ -1,0 +1,9 @@
+main : me.Ben.mcProject.Main
+name: test
+version: 1.0
+author: Ben McManus
+
+commands:
+  pv:
+  hello:
+

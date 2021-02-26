@@ -22,6 +22,7 @@ public class blockBreak implements Listener {
 		Block block = event.getBlock();
 		String p = event.getPlayer().getName();
 		
+		
 		Bukkit.broadcastMessage(p + " MINED " + block.getType());
 	}
 	
@@ -35,7 +36,7 @@ public class blockBreak implements Listener {
 		if (block.getType() == Material.DIAMOND_ORE)
 		{
 			final ItemStack item = new ItemStack(Material.STONE);
-			inv.remove(Material.DIAMOND);
+			event.setDropItems(false);
 			inv.addItem(item);
 			p.sendMessage(ChatColor.RED + "NO DIAMOND 4 U. HAHAHAHAH.");
 		}
